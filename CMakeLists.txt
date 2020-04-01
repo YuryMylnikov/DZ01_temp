@@ -15,6 +15,8 @@ set_target_properties(helloworld_cli helloworld test_version PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
+
+message("=====TRAVIS_BUILD_NUMBER==== $CMAKE_BINARY_DIR")
 target_include_directories(helloworld
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
